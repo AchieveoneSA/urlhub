@@ -31,7 +31,7 @@ class UrlRedirectController extends Controller
             // found and 404 will be returned to the client.
             $url = Url::whereKeyword($urlKey)->firstOrFail();
 
-            $this->visitorService->create($url);
+            // $this->visitorService->create($url);
 
             return $this->urlRedirection->execute($url);
         });
