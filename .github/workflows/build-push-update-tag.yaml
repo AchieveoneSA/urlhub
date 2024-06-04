@@ -1,0 +1,16 @@
+on:
+  push:
+    branches:
+      - staging
+      - production
+  pull_request:
+    branches:
+      - staging
+      - production
+
+jobs:
+  call-build-push-update-tag-workflow:
+    uses: AchieveoneSA/infrastructure/.github/workflows/build-push-update-tag-reusable.yml@main
+    secrets: inherit
+    with:
+      DOCKER_FILE_PATH: ./Dockerfile
