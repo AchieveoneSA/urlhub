@@ -24,7 +24,6 @@ Homestead.yaml
 # Composer
 /vendor
 composer.phar
-composer.lock
 # NPM
 /node_modules
 npm-debug.log
