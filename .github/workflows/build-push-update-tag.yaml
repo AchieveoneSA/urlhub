@@ -11,8 +11,6 @@ on:
 jobs:
   call-build-push-update-tag-workflow:
     uses: AchieveoneSA/infrastructure/.github/workflows/build-push-update-tag-template.yml@main
-    secrets:
-      REGISTRY_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
-    # secrets: inherit
+    secrets: inherit
     with:
       DOCKER_FILE_PATH: ./Dockerfile
